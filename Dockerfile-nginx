@@ -2,7 +2,7 @@ ARG PHP_VER_DOT
 FROM jtreminio/php:$PHP_VER_DOT
 LABEL maintainer="Juan Treminio <jtreminio@gmail.com>"
 
-RUN printf "deb [arch=amd64] http://ppa.launchpad.net/ondrej/nginx/ubuntu bionic main\n" \
+RUN printf "deb [arch=amd64] http://ppa.launchpadcontent.net/ondrej/nginx/ubuntu focal main\n" \
 >/etc/apt/sources.list.d/ondrej-nginx.list &&\
     apt-get update &&\
     apt-get install --no-install-recommends --no-install-suggests -y \
