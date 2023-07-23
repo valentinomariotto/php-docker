@@ -59,8 +59,10 @@ if [[ ${PHP_VER} == 7.4 ]]; then
     "
 fi
 
-apt-get update &&\
-apt-get install --no-install-recommends --no-install-suggests -y \
+# if there are troubles finding the packages, check the ondrej ppa installation in base_packages.sh
+
+apt-get update
+apt-get install --no-install-recommends --no-install-suggests -f -y \
     ${MODULES_DEFAULT} \
     ${MODULES_OPTIONAL} \
     ${MODULES_LEGACY} \

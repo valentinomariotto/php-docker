@@ -29,7 +29,7 @@ apt-get install --no-install-recommends --no-install-suggests -y \
     unzip \
     zip &&\
 cat /root/ondrej.pgp | apt-key add &&\
-printf "deb [arch=amd64] http://ppa.launchpad.net/ondrej/php/ubuntu bionic main\n" \
+printf "deb [arch=amd64] http://ppa.launchpadcontent.net/ondrej/php/ubuntu focal main\n" \
     >/etc/apt/sources.list.d/ondrej.list &&\
 rm -f /root/ondrej.pgp &&\
 apt-get update &&\
